@@ -85,7 +85,7 @@ public class MainDAO {
             concerto.setNumeroMassimoPartecipanti(faker.number().numberBetween(50, 10000));
             concerto.setGenere(faker.options().option(GenereEnum.class));
             concerto.setInStreaming(faker.bool().bool());
-            concerto.setLocation(faker.options().nextElement(listaLocation));
+//            concerto.setLocation(faker.options().nextElement(listaLocation));
             listaConcerti.add(concerto);
 
             //Gare di Atletica
@@ -95,7 +95,7 @@ public class MainDAO {
             garaDiAtletica.setDescrizione("Garona di Atletica");
             garaDiAtletica.setTipoEvento(faker.options().option(EventoEnum.class));
             garaDiAtletica.setNumeroMassimoPartecipanti(faker.number().numberBetween(10, 100));
-            garaDiAtletica.setLocation(faker.options().nextElement(listaLocation));
+//            garaDiAtletica.setLocation(faker.options().nextElement(listaLocation));
             garaDiAtletica.setAtleti(atleti);
             garaDiAtletica.setVincitore(faker.options().nextElement(listaPersone));
             listaGareDiAtletica.add(garaDiAtletica);
@@ -111,7 +111,7 @@ public class MainDAO {
             partitaDiCalcio.setSquadraOspite(faker.team().name());
             partitaDiCalcio.setGolSquadraDiCasa(faker.number().numberBetween(0, 7));
             partitaDiCalcio.setGolSquadraOspite(faker.number().numberBetween(0, 7));
-            partitaDiCalcio.setLocation(faker.options().nextElement(listaLocation));
+//            partitaDiCalcio.setLocation(faker.options().nextElement(listaLocation));
             if (partitaDiCalcio.getGolSquadraDiCasa() > partitaDiCalcio.getGolSquadraOspite()) {
                 partitaDiCalcio.setSquadraVincente(partitaDiCalcio.getSquadraDiCasa());
 
