@@ -17,7 +17,7 @@ public class GaraDiAtletica extends Evento {
     @OneToMany(mappedBy = "garaDiAtletica")
     private Set<Persona> atleti = new HashSet<>();
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "persona_id")
     private Persona vincitore;
 
